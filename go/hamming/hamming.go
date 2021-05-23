@@ -4,15 +4,15 @@ import "errors"
 
 func Distance(a, b string) (int, error) {
 	if len(a) != len(b) {
-		return -1, errors.New("Error");
+		return -1, errors.New("Error")
 	}
-	i := 0;
-	hammingDistance := 0;
+	i := 0
+	hammingDistance := 0
 	for i < len(a) {
-		if (a[i] != b[i]) {
-			hammingDistance += 1;
+		if a[i] != b[i] {
+			hammingDistance += 1
 		}
-		i++;
+		i++
 	}
-	return hammingDistance, nil;
+	return hammingDistance, nil
 }
