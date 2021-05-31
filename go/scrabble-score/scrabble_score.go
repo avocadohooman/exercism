@@ -12,8 +12,10 @@ J, X                               8
 Q, Z                               10
 */
 
+// ScoreSchema data type
 type ScoreSchema map[string]int
 
+// Score function
 func Score(word string) int {
 	if len(word) <= 0 {
 		return 0
@@ -35,6 +37,7 @@ func Score(word string) int {
 	return totalScore
 }
 
+// Point calculator algorithm
 func pointsCalculator(word string, scoreBoard string, scoreValue int) int {
 	totalScore := 0
 	for i := 0; i < len(word); i++ {
